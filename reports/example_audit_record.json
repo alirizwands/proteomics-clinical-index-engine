@@ -1,0 +1,20 @@
+{
+  "timestamp_utc": "2026-07-06T19:45:27.506914+00:00",
+  "sample_id": "S048",
+  "model_name": "ElasticNet_LogReg_ProteomicSeverityIndex",
+  "model_version": "0.2.0-demo",
+  "input_hash_sha256": "62bf006ce0774e2ee58bd061df7a9e065d62e0b4d9c0403a507c6403594271c5",
+  "output": {
+    "probability": 0.9628217918571029,
+    "index_score": 96,
+    "risk_band": "Red",
+    "confidence_label": "High",
+    "confidence_score": 0.881557250235877,
+    "decision_gate": "Clinician review required: elevated index",
+    "ci_lower": null,
+    "ci_upper": null,
+    "sample_id": "S048"
+  },
+  "reviewer_required": true,
+  "clinical_use_status": "research_demo_not_for_clinical_use"
+}

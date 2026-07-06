@@ -1,0 +1,5 @@
+risk_band,confidence_label,review_required,n
+Amber,Low,True,4
+Green,High,False,12
+Green,Moderate,False,7
+Red,Low,True,1

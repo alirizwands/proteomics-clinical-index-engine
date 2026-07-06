@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "proteomics-clinical-index-engine"
-version = "0.1.0"
-description = "Clinical AI starter pipeline for Olink-style proteomics data"
+version = "0.2.0"
+description = "Clinical AI index engine for Olink-style proteomics data"
 requires-python = ">=3.10"
 dependencies = [
     "numpy>=1.26",

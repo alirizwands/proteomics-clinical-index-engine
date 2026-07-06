@@ -1,17 +1,39 @@
 # Proteomics Clinical Index Engine
 
-An end-to-end **clinical AI / applied ML** starter project for Olink-style proteomic data. It demonstrates how to convert high-dimensional NPX protein profiles and clinical metadata into validated machine-learning baselines, leakage-safe evaluation workflows, and the foundation for index-level clinical scores.
+An end-to-end **clinical AI / applied ML** portfolio project for Olink-style proteomic data. It demonstrates how to convert high-dimensional NPX protein profiles and clinical metadata into **ML-ready data, leakage-safe models, calibrated probabilities, 0–100 clinical index scores, confidence-aware risk bands, biomarker explanations, clinician-facing reports, and audit records**.
 
-This repo is designed as a portfolio project for roles such as **Head of Applied ML and Clinical AI**, **Clinical AI Scientist**, **Translational AI Systems Lead**, or **AI-SaMD / Clinical Decision Support ML Lead**.
+This repo is designed for roles such as:
 
-## What this first version contains
+- Head of Applied ML and Clinical AI
+- Clinical AI / Proteomics ML Lead
+- Translational AI Systems Lead
+- AI-SaMD / Clinical Decision Support ML Lead
+- AI Evaluation, Validation, and Governance Lead
+
+## Executive positioning
+
+This is not a generic classifier notebook. It is a **clinical index engine**:
+
+```text
+Olink-style NPX data
+   → QC + ML-ready transformation
+   → high-dimensional proteomics ML
+   → calibration + uncertainty
+   → 0–100 clinical index
+   → confidence + review gate
+   → clinician-facing report
+   → audit trail + validation docs
+```
+
+## What the project demonstrates
 
 ### Notebook 01 — Olink-style NPX QC
 `notebooks/01_olink_npx_qc.ipynb`
 
 Shows how to:
+
 - generate/load synthetic Olink-style long-format NPX data
-- inspect core NPX fields: `SampleID`, `OlinkID`, `UniProt`, `Assay`, `Panel`, `LOD`, `NPX`, `QC_Warning`, `SampleQC`, `MissingFreq`
+- inspect NPX fields: `SampleID`, `OlinkID`, `UniProt`, `Assay`, `Panel`, `LOD`, `NPX`, `QC_Warning`, `SampleQC`, `MissingFreq`
 - run sample-level and protein-level QC
 - evaluate missingness and below-LOD behaviour
 - convert long-format proteomics data into a wide ML-ready matrix
@@ -21,38 +43,106 @@ Shows how to:
 `notebooks/02_high_dimensional_ml_baselines.ipynb`
 
 Shows how to:
-- handle the high-dimensional small-sample setting common in proteomics (`p > n`)
+
+- handle the small-sample/high-dimensional setting common in proteomics (`p > n`)
 - build leakage-safe scikit-learn pipelines
-- perform feature selection inside cross-validation
+- keep imputation, scaling, and feature selection inside CV
 - compare baseline models
 - report AUROC, AUPRC, Brier score, sensitivity, specificity, and selected protein signatures
 
+### Notebook 03 — Proteomic clinical index scoring
+`notebooks/03_proteomic_clinical_index_scoring.ipynb`
+
+Shows how to:
+
+- train a sparse elastic-net proteomics model
+- convert model probability into a 0–100 clinical index
+- map scores to green/amber/red bands
+- attach confidence labels
+- generate a clinician-review gate
+- extract top protein drivers for sample-level interpretation
+
+### Notebook 04 — Calibration, confidence, and review gates
+`notebooks/04_calibration_confidence_and_review_gates.ipynb`
+
+Shows how to:
+
+- compare base vs calibrated probabilities
+- report Brier score and expected calibration error
+- plot a calibration curve
+- generate bootstrap prediction intervals
+- combine margin, entropy, missingness, and uncertainty into confidence logic
+- produce routing summaries for clinician review
+
+### Notebook 05 — Clinician report and audit trail
+`notebooks/05_clinician_report_and_audit_trail.ipynb`
+
+Shows how to:
+
+- generate a structured clinician-facing decision-support report
+- include index score, risk band, confidence, review gate, top protein drivers, validation snapshot, limitations, and disclaimers
+- generate an audit record with timestamp, model version, input hash, output snapshot, and review requirement
+- check report completeness
+
+## Repository structure
+
+```text
+proteomics-clinical-index-engine/
+├── notebooks/
+│   ├── 01_olink_npx_qc.ipynb
+│   ├── 02_high_dimensional_ml_baselines.ipynb
+│   ├── 03_proteomic_clinical_index_scoring.ipynb
+│   ├── 04_calibration_confidence_and_review_gates.ipynb
+│   └── 05_clinician_report_and_audit_trail.ipynb
+├── src/proteomics_index/
+│   ├── synthetic_data.py
+│   ├── qc.py
+│   ├── modeling.py
+│   ├── scoring.py
+│   ├── confidence.py
+│   ├── report_generator.py
+│   └── governance.py
+├── docs/
+│   ├── proteomics_foundations.md
+│   ├── system_architecture.md
+│   ├── validation_protocol.md
+│   ├── validation_notes.md
+│   ├── model_card.md
+│   ├── data_card.md
+│   ├── clinical_safety_notes.md
+│   └── literature_benchmark.md
+├── reports/
+│   ├── baseline_model_results.csv
+│   ├── candidate_protein_signature.csv
+│   ├── patient_index_examples.csv
+│   ├── calibration_validation_metrics.csv
+│   ├── confidence_logic_examples.csv
+│   ├── example_clinician_report.md
+│   └── example_audit_record.json
+├── app/streamlit_app.py
+├── api/main.py
+└── tests/
+```
+
 ## Why this matters clinically
 
-Proteomics products do not just need a classifier. They need a **clinical index engine**: QC, cohort-aware preprocessing, signal-to-score logic, confidence logic, validation, reproducibility, auditability, and clinician-facing interpretation.
+Proteomics products do not just need a model. They need a **clinical AI translation layer**: QC, cohort-aware preprocessing, signal-to-score logic, confidence logic, validation, reproducibility, auditability, and clinician-facing interpretation.
 
-This first version focuses on the first two layers:
-
-1. **NPX data readiness and quality control**
-2. **Leakage-safe high-dimensional ML baselines**
-
-The next versions should add:
-- calibrated 0–100 index scores
-- confidence bands and indeterminate-zone logic
-- biomarker explanations
-- clinician-facing report generation
-- validation protocol and model card
-- FastAPI/Streamlit demo
+This repository demonstrates that translation pathway while using public-safe synthetic data.
 
 ## Data
 
 The repo includes a small **synthetic Olink-style NPX dataset** under `data/sample/`. It is not real patient data and is safe for public GitHub use.
 
 Files:
+
 - `data/sample/olink_synthetic_npx.csv`
 - `data/sample/sample_metadata.csv`
+- `data/processed/X_proteomics.csv`
+- `data/processed/y_severe_outcome.csv`
+- `data/processed/metadata_model.csv`
 
-## Python setup
+## Setup
 
 ```bash
 python -m venv .venv
@@ -61,10 +151,28 @@ pip install -r requirements.txt
 jupyter lab
 ```
 
-## Optional Python alternative to OlinkAnalyze
+Run tests:
 
-OlinkAnalyze is the official R ecosystem package. For Python-only workflows, this repo uses pandas/scikit-learn and defines minimal Olink-style QC utilities in `src/proteomics_index/`. You can also explore `pyprideap`, a Python package that supports Olink Explore/Explore HT/Target/Reveal and SomaScan files, QC reports, LOD handling, preprocessing, normalization, and statistical analysis.
+```bash
+pytest -q
+```
+
+Run optional API demo:
+
+```bash
+uvicorn api.main:app --reload
+```
+
+Run optional Streamlit demo:
+
+```bash
+streamlit run app/streamlit_app.py
+```
+
+## Python alternative to OlinkAnalyze
+
+OlinkAnalyze is the official R ecosystem package. For Python-only workflows, this repo uses pandas/scikit-learn and defines minimal Olink-style QC utilities in `src/proteomics_index/`. You can also explore `pyprideap`, a Python package that supports Olink Explore/Explore HT/Target/Reveal and SomaScan-style workflows.
 
 ## Clinical-use disclaimer
 
-This project is for education, portfolio demonstration, and engineering design only. It is not a medical device, diagnostic system, or clinical decision-support tool.
+This project is for education, portfolio demonstration, and engineering design only. It is **not** a medical device, diagnostic system, or clinical decision-support tool.
