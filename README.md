@@ -2,14 +2,6 @@
 
 An end-to-end **clinical AI / applied ML** portfolio project for Olink-style proteomic data. It demonstrates how to convert high-dimensional NPX protein profiles and clinical metadata into **ML-ready data, leakage-safe models, calibrated probabilities, 0–100 clinical index scores, confidence-aware risk bands, biomarker explanations, clinician-facing reports, and audit records**.
 
-This repo is designed for roles such as:
-
-- Head of Applied ML and Clinical AI
-- Clinical AI / Proteomics ML Lead
-- Translational AI Systems Lead
-- AI-SaMD / Clinical Decision Support ML Lead
-- AI Evaluation, Validation, and Governance Lead
-
 ## Executive positioning
 
 This is not a generic classifier notebook. It is a **clinical index engine**:
