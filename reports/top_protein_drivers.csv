@@ -1,0 +1,11 @@
+rank,protein_feature,coefficient,contribution,direction,absolute_contribution,interpretation_note
+1,Protein_011,0.6647033324086715,2.488534120065529,increases index,2.488534120065529,Demo model coefficient-based driver for one sample; not causal biomarker evidence.
+2,Protein_013,0.5594344056439138,0.3647258671979883,increases index,0.3647258671979883,Demo model coefficient-based driver for one sample; not causal biomarker evidence.
+3,Protein_227,0.3118560287147434,0.3493700643977325,increases index,0.3493700643977325,Demo model coefficient-based driver for one sample; not causal biomarker evidence.
+4,Protein_012,-0.4063448562545179,0.3313449586665624,increases index,0.3313449586665624,Demo model coefficient-based driver for one sample; not causal biomarker evidence.
+5,Protein_017,0.1366068355825192,0.3018605361127633,increases index,0.3018605361127633,Demo model coefficient-based driver for one sample; not causal biomarker evidence.
+6,Protein_016,0.473913590033981,0.3015786614445246,increases index,0.3015786614445246,Demo model coefficient-based driver for one sample; not causal biomarker evidence.
+7,Protein_172,0.2191057028361168,-0.1850214150578607,decreases index,0.1850214150578607,Demo model coefficient-based driver for one sample; not causal biomarker evidence.
+8,Protein_014,0.0648566043930465,0.143896187369011,increases index,0.143896187369011,Demo model coefficient-based driver for one sample; not causal biomarker evidence.
+9,Protein_010,0.1957994757398643,0.1426993163959164,increases index,0.1426993163959164,Demo model coefficient-based driver for one sample; not causal biomarker evidence.
+10,Protein_019,0.2190875274378287,0.1269603082466855,increases index,0.1269603082466855,Demo model coefficient-based driver for one sample; not causal biomarker evidence.

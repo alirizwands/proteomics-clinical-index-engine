@@ -1,0 +1,13 @@
+metric,value,definition
+n_samples_npx,96.0,Unique samples represented in long-format NPX table
+n_samples_metadata,96.0,Unique samples represented in clinical/sample metadata
+n_assays,240.0,Unique protein assays
+n_uniprot_ids,240.0,Unique UniProt identifiers
+n_panels,4.0,Unique assay panels
+n_plates,4.0,Unique assay plates/batches
+n_rows_long_format,23040.0,Rows in the long-format NPX file
+npx_missing_rate,0.0136,Fraction of NPX values missing
+below_lod_rate,0.0247,Fraction of protein measurements marked below LOD
+qc_warning_rate,0.036,Fraction of long-format rows with non-pass QC warning
+sample_qc_warning_rate,0.1146,Fraction of samples with non-pass SampleQC
+severe_outcome_rate,0.1667,Fraction of samples labelled severe outcome
