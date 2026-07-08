@@ -1,4 +1,4 @@
-# System Architecture — Proteomics Clinical Index Engine
+# System Architecture: Proteomics Clinical Index Engine
 
 ## Architecture overview
 
