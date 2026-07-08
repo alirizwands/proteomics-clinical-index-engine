@@ -1,4 +1,4 @@
-# Validation Protocol — Proteomics Clinical Index Engine
+# Validation Protocol: Proteomics Clinical Index Engine
 
 ## Purpose
 
