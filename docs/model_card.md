@@ -1,4 +1,4 @@
-# Model Card — Proteomic Severity Index Demo
+# Model Card: Proteomic Severity Index Demo
 
 ## Model name
 
