@@ -1,4 +1,4 @@
-# Data Card — Synthetic Olink-style NPX Dataset
+# Data Card: Synthetic Olink-style NPX Dataset
 
 ## Dataset type
 
