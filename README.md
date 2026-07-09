@@ -16,6 +16,13 @@ Olink-style NPX data
    → clinician-facing report
    → audit trail + validation docs
 ```
+## Demo and Learning Scope
+
+This repository is a demonstration and learning version of a clinical proteomics AI pipeline. It is designed to showcase the core applied ML concepts required for proteomics-driven clinical AI, including NPX-style data handling, QC, high-dimensional modelling, index scoring, confidence logic, clinician-facing reporting, and auditability.
+
+The full production-grade version of such a system would be significantly more complex and would typically include additional components such as real-world validated proteomics datasets, expanded clinical validation, regulatory documentation, data governance controls, security architecture, model monitoring, quality-management workflows, human-in-the-loop review processes, deployment infrastructure, and lifecycle evidence required for regulated healthcare environments.
+
+This repository should therefore be understood as a portfolio/demo project rather than a certified medical device, diagnostic product, or clinically validated deployment.
 
 ## What the project demonstrates
 
