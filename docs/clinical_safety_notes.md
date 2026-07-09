@@ -21,3 +21,7 @@ This project demonstrates clinical AI engineering discipline, not clinical deplo
 - locked model versioning
 - regulatory quality-management processes
 - human factors evaluation
+
+## Demonstration and Non-Clinical Use
+
+This project is not intended for clinical use. It is a functional demonstration of how proteomics data may be transformed into confidence-aware, clinician-reviewable AI outputs. It excludes proprietary datasets, confidential client assets, production algorithms, regulated deployment infrastructure, and NDA-restricted implementation details.
