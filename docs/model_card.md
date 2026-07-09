@@ -52,3 +52,6 @@ The demo reports AUROC, AUPRC, Brier score, expected calibration error, sensitiv
 - report disclaimers
 - audit trail with input hash and model version
 - feature-selection leakage controls
+
+
+**Confidentiality and Scope Note:** This model card describes a demonstration system created for education, technical explanation, and controlled demonstration. It does not represent a released clinical product, certified medical device, or confidential client implementation. Production-grade systems require deeper validation, governance, regulatory evidence, security controls, and lifecycle monitoring.
