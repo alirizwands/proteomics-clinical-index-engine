@@ -19,7 +19,7 @@ Olink-style NPX data
 
 ## What the project demonstrates
 
-### Notebook 01 — Olink-style NPX QC
+### Notebook 01: Olink-style NPX QC
 `notebooks/01_olink_npx_qc.ipynb`
 
 Shows how to:
@@ -31,7 +31,7 @@ Shows how to:
 - convert long-format proteomics data into a wide ML-ready matrix
 - save ML-ready `X`, `y`, and metadata tables
 
-### Notebook 02 — High-dimensional ML baselines
+### Notebook 02: High-dimensional ML baselines
 `notebooks/02_high_dimensional_ml_baselines.ipynb`
 
 Shows how to:
@@ -42,7 +42,7 @@ Shows how to:
 - compare baseline models
 - report AUROC, AUPRC, Brier score, sensitivity, specificity, and selected protein signatures
 
-### Notebook 03 — Proteomic clinical index scoring
+### Notebook 03: Proteomic clinical index scoring
 `notebooks/03_proteomic_clinical_index_scoring.ipynb`
 
 Shows how to:
@@ -54,7 +54,7 @@ Shows how to:
 - generate a clinician-review gate
 - extract top protein drivers for sample-level interpretation
 
-### Notebook 04 — Calibration, confidence, and review gates
+### Notebook 04: Calibration, confidence, and review gates
 `notebooks/04_calibration_confidence_and_review_gates.ipynb`
 
 Shows how to:
@@ -66,7 +66,7 @@ Shows how to:
 - combine margin, entropy, missingness, and uncertainty into confidence logic
 - produce routing summaries for clinician review
 
-### Notebook 05 — Clinician report and audit trail
+### Notebook 05: Clinician report and audit trail
 `notebooks/05_clinician_report_and_audit_trail.ipynb`
 
 Shows how to:
