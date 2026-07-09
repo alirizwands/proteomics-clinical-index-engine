@@ -16,13 +16,13 @@ Olink-style NPX data
    → clinician-facing report
    → audit trail + validation docs
 ```
-## Demo and Learning Scope
+## Demonstration Scope and Disclaimer
 
-This repository is a demonstration and learning version of a clinical proteomics AI pipeline. It is designed to showcase the core applied ML concepts required for proteomics-driven clinical AI, including NPX-style data handling, QC, high-dimensional modelling, index scoring, confidence logic, clinician-facing reporting, and auditability.
+This repository is an intentionally developed functional demonstration of a clinical proteomics AI pipeline. It has been prepared for education, technical communication, and controlled demonstration purposes, showing how Olink-style NPX data can be handled, quality-checked, transformed into ML-ready datasets, modelled using high-dimensional biomedical ML methods, converted into index-level scores, and presented through confidence-aware, clinician-reviewable outputs.
 
-The full production-grade version of such a system would be significantly more complex and would typically include additional components such as real-world validated proteomics datasets, expanded clinical validation, regulatory documentation, data governance controls, security architecture, model monitoring, quality-management workflows, human-in-the-loop review processes, deployment infrastructure, and lifecycle evidence required for regulated healthcare environments.
+The repository does not contain any proprietary client code, confidential datasets, production infrastructure, regulatory submissions, commercial algorithms, or implementation details from real-world delivered systems. Actual production or client-facing systems in this domain are substantially more complex and may include additional protected components such as validated clinical datasets, regulated software architecture, security controls, quality-management workflows, audit evidence, monitoring pipelines, regulatory documentation, human-in-the-loop governance, and organisation-specific deployment processes.
 
-This repository should therefore be understood as a portfolio/demo project rather than a certified medical device, diagnostic product, or clinically validated deployment.
+This demo is therefore designed to communicate the methodology, architecture, and applied AI thinking behind clinical proteomics decision-support systems without disclosing protected intellectual property, confidential project assets, or NDA-restricted implementation details.
 
 ## What the project demonstrates
 
