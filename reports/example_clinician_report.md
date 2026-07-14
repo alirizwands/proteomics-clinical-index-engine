@@ -1,4 +1,4 @@
-# Proteomic Severity Index: Clinician Decision-Support Report
+# Example Proteomics Clinical Index Report
 
 **Generated:** 2026-07-06 19:45 UTC  
 **Sample ID:** S048  
