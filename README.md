@@ -2,6 +2,22 @@
 
 An end-to-end **clinical AI / applied ML** portfolio project for Olink-style proteomic data. It demonstrates how to convert high-dimensional NPX protein profiles and clinical metadata into **ML-ready data, leakage-safe models, calibrated probabilities, 0–100 clinical index scores, confidence-aware risk bands, biomarker explanations, clinician-facing reports, and audit records**.
 
+## Repository walkthrough
+
+https://github.com/user-attachments/assets/bc44a46d-94d0-4e22-b43c-5c98ec28bf7b
+
+**Translating Protein Data into Confidence-Aware Clinical Scores**
+
+A guided discussion of the complete public demonstration pipeline, covering
+proteomic-data QC, high-dimensional modelling, calibration, index scoring,
+confidence logic, clinician review, reporting, and auditability.
+
+> This recording explains a synthetic-data educational demonstration. It is
+> not a clinically validated diagnostic product, regulated medical device,
+> or proprietary client implementation.
+
+
+
 ## Executive positioning
 
 This is not a generic classifier notebook. It is a **clinical index engine**:
