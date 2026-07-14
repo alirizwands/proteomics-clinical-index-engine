@@ -42,8 +42,10 @@ st.set_page_config(
 
 st.title("Proteomics Clinical Index Engine")
 st.caption(
-    "Interactive public reference demonstration: calibrated model probability "
-    "→ 0–100 index → risk band → confidence-aware clinician review gate"
+    "Interactive public reference implementation demonstrating how an "
+    "upstream proteomics model output can be translated into a 0–100 index, "
+    "illustrative risk band, confidence assessment, clinician-review decision "
+    "and auditable output."
 )
 
 st.info(
@@ -51,20 +53,33 @@ st.info(
     "It is not a medical device, diagnostic system, clinical recommendation, "
     "or substitute for professional judgement."
 )
+with st.expander("How to use this demonstration", expanded=True):
+    st.markdown(
+        """
+1. Adjust the **simulated model probability** in the sidebar.
+2. Select an illustrative **confidence level**.
+3. Observe how the index, risk band and clinician-review decision change.
+
+This screen demonstrates the **interpretation, reporting and governance layer**.
+It does not upload proteomic samples, train a model or generate a clinical diagnosis.
+"""
+    )
+
 
 with st.sidebar:
     st.header("Demonstration inputs")
 
     probability = st.slider(
-        "Calibrated model probability",
+        "Simulated model probability",
         min_value=0.0,
         max_value=1.0,
         value=0.72,
         step=0.01,
         help=(
-            "Illustrative calibrated probability produced by an upstream model. "
-            "The notebooks demonstrate how such probabilities can be generated "
-            "from synthetic Olink-style NPX data."
+             "Represents the calibrated output of an upstream proteomics model. "
+             "Raw NPX data are not processed directly on this screen. The repository "
+             "notebooks demonstrate how this type of probability can be generated "
+             "from synthetic Olink-style NPX data."
         ),
     )
 
@@ -147,29 +162,39 @@ else:
         "and must be interpreted alongside the wider clinical context."
     )
 
-st.markdown("### Translation pathway")
-st.code(
-    "Olink-style NPX data\n"
-    "  → quality control and ML-ready transformation\n"
-    "  → leakage-safe high-dimensional modelling\n"
-    "  → calibrated probability\n"
-    "  → 0–100 index and illustrative risk band\n"
-    "  → confidence logic and clinician-review gate\n"
-    "  → report and audit record",
-    language="text",
-)
+with st.expander("How this screen connects to the complete pipeline"):
+    st.code(
+        "Olink-style NPX data\n"
+        "  → quality control and ML-ready transformation\n"
+        "  → leakage-safe high-dimensional modelling\n"
+        "  → calibrated probability\n"
+        "  → 0–100 index and illustrative risk band\n"
+        "  → confidence logic and clinician-review gate\n"
+        "  → report and audit record",
+        language="text",
+    )
+st.markdown("### Static example outputs")
 
+st.info(
+    "The report and audit record below were generated from a separate "
+    "synthetic demonstration sample. They do not update when the interactive "
+    "controls above are changed."
+)
 report_path = ROOT / "reports" / "example_clinician_report.md"
 audit_path = ROOT / "reports" / "example_audit_record.json"
 
-output_col, audit_col = st.columns(2)
 
-with output_col:
-    st.markdown("### Example clinician-facing report")
+report_tab, audit_tab = st.tabs(
+    ["Clinician-facing report", "Technical audit record"]
+)
+
+with report_tab:
+    st.markdown("### Static example clinician-facing report")
     if report_path.exists():
         report_text = report_path.read_text(encoding="utf-8")
         with st.expander("Open example report", expanded=True):
             st.markdown(report_text)
+
         st.download_button(
             "Download example report",
             data=report_text,
@@ -178,14 +203,17 @@ with output_col:
         )
     else:
         st.info(
-            "The example report has not been generated. Run notebook 05 to create it."
+            "The example report has not been generated. "
+            "Run notebook 05 to create it."
         )
 
-with audit_col:
-    st.markdown("### Example audit record")
+with audit_tab:
+    st.markdown("### Static example audit record")
     if audit_path.exists():
         try:
-            audit_record = json.loads(audit_path.read_text(encoding="utf-8"))
+            audit_record = json.loads(
+                audit_path.read_text(encoding="utf-8")
+            )
         except json.JSONDecodeError:
             st.error("The example audit record is not valid JSON.")
         else:
@@ -196,9 +224,13 @@ with audit_col:
             "Run notebook 05 to create it."
         )
 
-st.markdown("### Demonstration boundary")
+
+
+st.markdown("### Scope and limitations")
 st.markdown(
     """
+- The probability control represents a simulated upstream model output; the
+  deployed screen does not directly process uploaded proteomics data.
 - The interactive controls demonstrate the **score presentation, confidence and
   human-review layer**.
 - The five notebooks demonstrate the wider synthetic
