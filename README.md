@@ -20,7 +20,7 @@ confidence logic, clinician review, reporting, and auditability.
 
 ## Try the live demonstration
 
-[![Launch the live Streamlit demo](https://proteomics-clinical-index-engine.streamlit.app/)
+[![Launch the live Streamlit demo](https://img.shields.io/badge/Launch-Live%20Streamlit%20Demo-FF4B4B?logo=streamlit&logoColor=white)](https://proteomics-clinical-index-engine.streamlit.app/)
 
 Explore how an illustrative calibrated probability is converted into a
 0–100 clinical index, confidence label, risk band, clinician-review gate,
