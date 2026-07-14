@@ -32,7 +32,7 @@ Olink-style NPX data
    → clinician-facing report
    → audit trail + validation docs
 ```
-## Scope and Disclaimer
+## Scope
 
 This repository is an intentionally developed functional demonstration of a clinical proteomics AI pipeline. It has been prepared for education, technical communication, and controlled demonstration purposes, showing how Olink-style NPX data can be handled, quality-checked, transformed into ML-ready datasets, modelled using high-dimensional biomedical ML methods, converted into index-level scores, and presented through confidence-aware, clinician-reviewable outputs.
 
