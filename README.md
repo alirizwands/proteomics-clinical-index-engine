@@ -18,7 +18,18 @@ confidence logic, clinician review, reporting, and auditability.
 > not a clinically validated diagnostic product, regulated medical device,
 > or proprietary client implementation.
 
+## Try the live demonstration
 
+[![Launch the live Streamlit demo](https://proteomics-clinical-index-engine.streamlit.app/)
+
+Explore how an illustrative calibrated probability is converted into a
+0–100 clinical index, confidence label, risk band, clinician-review gate,
+example report and audit record.
+
+> The live application demonstrates the score-presentation and
+> human-review layer using synthetic/example inputs and illustrative
+> thresholds. The notebooks demonstrate the wider NPX quality-control,
+> modelling and calibration workflow.
 
 ## Executive positioning
 
