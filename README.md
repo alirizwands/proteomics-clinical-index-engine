@@ -1,6 +1,8 @@
 # Proteomics Clinical Index Engine
 
-An end-to-end **clinical AI / applied ML** portfolio project for Olink-style proteomic data. It demonstrates how to convert high-dimensional NPX protein profiles and clinical metadata into **ML-ready data, leakage-safe models, calibrated probabilities, 0–100 clinical index scores, confidence-aware risk bands, biomarker explanations, clinician-facing reports, and audit records**.
+**An open, public-safe reference implementation for translating high-dimensional proteomic measurements into calibrated, confidence-aware clinical index outputs, human-review workflows, clinician-facing reports and auditable records.**
+
+The repository is disease-agnostic, uses synthetic data, and does not reproduce any proprietary clinical panel, commercial algorithm or client implementation.
 
 ## Repository walkthrough
 
