@@ -2,7 +2,7 @@
 
 **Generated:** 2026-07-06 19:45 UTC  
 **Sample ID:** S048  
-**Intended use:** Research/portfolio demonstration of clinical AI architecture. Not for diagnosis or treatment.
+**Intended use:** Synthetic public reference implementation for demonstrating clinical-AI architecture. Not for diagnosis, treatment or patient management.
 
 ## 1. Index Result
 
@@ -35,7 +35,9 @@
 
 This output is a **decision-support summary**, not an autonomous diagnosis. It should be reviewed alongside clinical history, standard laboratory results, assay QC information, and clinician judgement. Red or low-confidence outputs require clinician review before any action is considered.
 
-## 5. Validation Snapshot
+## 5. Synthetic Demonstration Metrics
+
+These values were generated using synthetic demonstration data and must not be interpreted as evidence of clinical performance.
 
 - AUROC: 1.0
 - AUPRC: 1.0
