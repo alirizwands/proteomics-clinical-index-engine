@@ -1,7 +1,7 @@
 # Technical Risk Register for a Proteomics-Driven Fertility AI System
 
 > **Public demo notice**  
-> This document is an independent educational and technical-review artifact for a public GitHub repository. It does not disclose, reproduce, or claim to represent any confidential client, employer, partner, or proprietary implementation. The concerns are framed generically for proteomics-driven fertility prediction and clinical decision-support systems.
+> This document is an independent educational and technical-review artifact for this public GitHub repository. It does not disclose, reproduce, or claim to represent any confidential client, employer, partner, or proprietary implementation. The concerns are framed generically for proteomics-driven fertility prediction and clinical decision-support systems.
 
 ## Purpose
 
